@@ -65,6 +65,7 @@ def quto_string(string, split_flag=None):
 def scatter(inputs, target_gpus, dim=0):
     r""" Duplicates references to objects.
     NOTE: 每个元素都拷贝复制
+    refer: https://github.com/pytorch/pytorch/blob/4bd54cebe0b736acbcb8f040df897d17956bb71b/torch/nn/parallel/scatter_gather.py#L42
     """
     def scatter_map(obj):
         if isinstance(obj, tuple) and len(obj) > 0:
